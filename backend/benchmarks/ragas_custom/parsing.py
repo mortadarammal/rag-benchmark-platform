@@ -27,7 +27,7 @@ def clamp_score(value: Any) -> float:
 
 def clean_json_from_llm(text: Any) -> str:
     """
-    Robust cleaner copied from the notebook idea.
+    cleaner copied from the notebook.
 
     It accepts:
     - fenced JSON

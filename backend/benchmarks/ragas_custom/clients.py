@@ -12,11 +12,6 @@ judge_embeddings = LangchainEmbeddingsWrapper(
     NVIDIAEmbeddings(model=CONFIG["embedding_model"])
 )
 
-Important:
-Your current custom SingleTurnMetric classes score by LLM prompt, so the
-embedding wrapper is not used by the 4 custom metrics. It is still created here
-because it existed in the notebook and lets you enable default RAGAS metrics later
-without changing the integration structure.
 """
 
 import os

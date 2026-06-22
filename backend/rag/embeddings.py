@@ -11,7 +11,7 @@ def get_embedding_model() -> NVIDIAEmbeddings:
     """
     Returns the NVIDIA embedding model.
 
-    This comes from your notebook:
+    This comes from the notebook:
 
         NVIDIAEmbeddings(
             model=CONFIG["embedding_model"],

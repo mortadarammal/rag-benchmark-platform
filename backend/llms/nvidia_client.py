@@ -19,8 +19,6 @@ def get_nvidia_llama() -> ChatNVIDIA:
     """
     Creates the NVIDIA-hosted Llama chat model.
 
-    Simplified from your uploaded question generator file,
-    where ChatNVIDIA was used for question generation.
     """
 
     api_key = require_nvidia_api_key()

@@ -48,9 +48,7 @@ def generate_answer_with_model(
     wait_seconds: int = 10,
 ) -> dict:
     """
-    Phase 4 equivalent of your notebook's ask_rag().
-
-    Steps:
+     equivalent to the notebook's ask_rag().
     1. Retrieve top-k chunks from Qdrant
     2. Build context
     3. Format RAG answer prompt

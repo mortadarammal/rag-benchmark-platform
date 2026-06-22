@@ -15,7 +15,6 @@ from rag.retrieval import retrieve_relevant_chunks
 def clean_json_from_llm(text: str) -> str:
     """
     Extract JSON from common LLM responses that may include markdown fences.
-    Adapted from your uploaded question generator file.
     """
 
     text = text.strip()

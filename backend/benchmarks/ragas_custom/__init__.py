@@ -1,7 +1,7 @@
 """
-Custom RAGAS SingleTurnMetric implementation for the LLM-as-Judge phase.
+Custom RAGAS SingleTurnMetric implementation for the LLM-as-Judg.
 
-This package mirrors the notebook Phase 3 design:
+This code is like the notebook Phase 3 design:
 - custom prompts
 - custom SingleTurnMetric classes
 - robust JSON score parsing

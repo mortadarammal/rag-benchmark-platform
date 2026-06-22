@@ -14,7 +14,7 @@ def build_langchain_document(
     """
     Convert extracted text into a LangChain Document.
 
-    This is adapted from your notebook's Document creation logic.
+    This is adapted from the notebook's Document creation logic.
     In the notebook, metadata came from PubMedQA.
     Here, metadata comes from the uploaded file.
     """
@@ -37,7 +37,7 @@ def chunk_uploaded_document(
     Split one uploaded file into chunks.
 
     This uses the same RecursiveCharacterTextSplitter logic
-    from your notebook.
+    from the notebook.
     """
 
     document = build_langchain_document(

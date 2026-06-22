@@ -22,14 +22,12 @@ from .prompts import (
 @dataclass
 class _BaseCustomJudgeMetric(SingleTurnMetric):
     """
-    Base class for your custom RAGAS metrics.
+    class for custom RAGAS metrics.
 
     RAGAS requires the metric to return a float, but your Django model also
     needs explanation/verdict details. Each metric therefore stores its latest
     parsed output in `last_output`.
 
-    This is safe in the current Celery integration because we evaluate one
-    answer at a time with max_workers=1.
     """
 
     llm: Any = None
@@ -97,9 +95,6 @@ class CustomAnswerRelevancy(_BaseCustomJudgeMetric):
     """
     Direct custom answer relevancy.
 
-    This intentionally does NOT use the default RAGAS AnswerRelevancy embedding
-    cosine-similarity flow, because the notebook replaced it with this custom
-    LLM-scored metric.
     """
 
     name: str = "answer_relevancy"
@@ -129,8 +124,6 @@ class CustomContextPrecision(_BaseCustomJudgeMetric):
     """
     Custom context precision.
 
-    The prompt asks the judge to apply the RAGAS precision@k idea:
-    average Precision@k at useful/relevant ranks.
     """
 
     name: str = "context_precision"
@@ -160,8 +153,6 @@ class CustomContextSufficiency(_BaseCustomJudgeMetric):
     """
     Custom context sufficiency.
 
-    This replaces ground-truth-based ContextRecall because your fullstack app
-    normally has no human reference answer.
     """
 
     name: str = "context_sufficiency"

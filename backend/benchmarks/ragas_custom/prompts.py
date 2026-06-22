@@ -4,9 +4,6 @@
 """
 Custom judge prompts copied/generalized from notebook Phase 3.
 
-Important:
-These are custom RAGAS-style metrics implemented as SingleTurnMetric classes.
-They do NOT use the default RAGAS AnswerRelevancy, ContextPrecision, or ContextRecall.
 """
 
 JUDGE_PROMPT_FAITHFULNESS = """\

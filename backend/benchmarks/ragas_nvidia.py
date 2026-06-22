@@ -40,10 +40,7 @@ def get_ragas_embeddings():
 
 
 def get_raw_judge_llm():
-    """
-    Use this one for your custom metrics that call nvidia_llm.invoke(...)
-    directly.
-    """
+
     return ChatNVIDIA(
         model=JUDGE_MODEL,
         api_key=NVIDIA_API_KEY,

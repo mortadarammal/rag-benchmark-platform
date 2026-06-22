@@ -49,8 +49,6 @@ def build_run_config() -> RunConfig:
     Notebook equivalent:
     RunConfig(timeout=600, max_workers=1, max_retries=3)
 
-    max_workers=1 is important because each metric object stores `last_output`
-    for the explanation that is later saved in EvaluationResult.
     """
     return RunConfig(
         timeout=600,
@@ -104,7 +102,6 @@ def evaluate_answer_with_custom_ragas(
     # This mirrors the notebook embedding setup.
     # The custom metrics do not currently use embeddings, but keeping this
     # initialized makes the integration faithful to the notebook and ready if
-    # you later re-enable default RAGAS AnswerRelevancy/ContextPrecision.
     judge_embeddings = get_judge_embeddings_wrapped()
 
     metrics = build_custom_metrics(
