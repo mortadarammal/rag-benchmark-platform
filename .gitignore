@@ -1,4 +1,4 @@
-# Environment variables
+# Environment variables / secrets
 .env
 *.env
 backend/.env
@@ -13,7 +13,6 @@ __pycache__/
 venv/
 backend/venv/
 .venv/
-.env/
 
 # Django
 *.sqlite3
@@ -47,7 +46,7 @@ pnpm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Docker volumes / local data
+# Docker/local databases
 postgres_data/
 qdrant_data/
 redis_data/
@@ -58,27 +57,8 @@ data/
 qdrant/storage/
 storage/
 
-# Uploaded documents and generated outputs
+# Generated app data
 uploads/
-documents/
 generated_questions.json
 results/
 backend/results/
-backend/uploads/
-backend/documents/
-
-# Jupyter checkpoints
-.ipynb_checkpoints/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE files
-.vscode/
-.idea/
-
-# Temporary files
-tmp/
-temp/
-*.tmp
