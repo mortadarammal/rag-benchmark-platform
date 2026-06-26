@@ -54,6 +54,12 @@ The score should reflect:
 - whether the answer is overconfident when the contexts are insufficient,
 - whether important nuances are missing.
 
+Before scoring, think step by step:
+- List the key claims in the generated answer.
+- For each claim, check whether it is supported, partially supported, unsupported, or contradicted by the contexts.
+- Determine whether the final conclusion is correct given the contexts.
+- Based on this reasoning, decide the score.
+
 Return ONLY valid compact JSON.
 Do NOT use markdown.
 Do NOT wrap the answer in ```json.
@@ -101,6 +107,12 @@ Evaluation rules:
 Scoring instructions:
 Assign a decimal score between 0 and 1 based on how directly and specifically the answer addresses the question.
 Use any decimal value between 0 and 1 when appropriate.
+
+Before scoring, think step by step:
+- Identify the specific biomedical entities, mechanism, and outcome required by the question.
+- Check whether the answer addresses each of these specifically.
+- Determine whether the answer is direct and specific or generic and vague.
+- Based on this reasoning, decide the score.
 
 The score should reflect:
 - whether the answer directly responds to the exact question,
@@ -176,6 +188,12 @@ Scoring instructions:
 Assign a decimal score between 0 and 1 based on how well the useful contexts are ranked.
 Use any decimal value between 0 and 1 when appropriate.
 
+Before scoring, think step by step:
+- For each chunk, state whether it is useful and why.
+- Note which useful chunks appear early vs. late.
+- Compute the precision@k mentally.
+- Based on this reasoning, decide the score.
+
 The score should reflect:
 - the number of useful contexts,
 - whether useful contexts appear early in the ranking,
@@ -250,6 +268,13 @@ The score should reflect:
 - whether the contexts support the final conclusion when the question requires one,
 - whether important evidence is missing,
 - whether irrelevant chunks reduce the overall sufficiency of the retrieved evidence.
+
+Before scoring, think step by step:
+- List the key elements needed to answer the question (disease, mechanism, outcome, yes/no conclusion, etc.).
+- For each element, check whether the contexts contain sufficient evidence.
+- Note any important missing evidence.
+- Based on this reasoning, decide the score.
+
 
 Return ONLY valid compact JSON.
 Do NOT use markdown.
